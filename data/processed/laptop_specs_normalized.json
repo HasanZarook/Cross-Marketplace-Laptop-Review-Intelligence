@@ -1,0 +1,689 @@
+[
+  {
+    "source_pdf": "c08504822.pdf",
+    "brand": "HP",
+    "model": "ProBook 450 15.6 inch G10",
+    "processor": [
+      "Intel® Core™ i3-1340P 13th Generation",
+      "Intel® Core™ i5-1334U 13th Generation",
+      "Intel® Core™ i5-1335U 13th Generation",
+      "Intel® Core™ i5-1340P 13th Generation",
+      "Intel® Core™ i5-1345U 13th Generation",
+      "Intel® Core™ i7-1355U 13th Generation",
+      "Intel® Core™ i7-1360P 13th Generation"
+    ],
+    "memory": [
+      "32GB DDR4-3200 MHz RAM"
+    ],
+    "storage": [
+      "128GB up to 512GB PCIe NVMe Value SSD",
+      "Up to 1TB PCIe NVMe M.2 SSD TLC"
+    ],
+    "display": [
+      {
+        "size": "15.6 inches (39.6cm)",
+        "resolution": "1920x1080",
+        "brightness": "400 nits",
+        "touch": true,
+        "anti_glare": true,
+        "panel_type": "Not specified",
+        "refresh_rate": "Not specified"
+      }
+    ],
+    "graphics": [
+      "Intel® UHD Graphics (Integrated)",
+      "NVIDIA® GeForce RTX™ 2050 Laptop GPU (4 GB GDDR6 dedicated)"
+    ],
+    "battery": [
+      "HP 3-Cell 42Wh Li-ion polymer",
+      "HP 3-Cell 51Wh Li-ion polymer"
+    ],
+    "weights": {
+      "variant_1": {
+        "sku_id": "HP450G10-Standard",
+        "top_material": "Not specified",
+        "bottom_material": "Not specified",
+        "weight": "1.79 kg",
+        "weight_lbs": "3.95 lbs"
+      }
+    },
+    "dimensions": "35.94 x 23.39 x 1.99 cm",
+    "ports": [
+      "USB-C®",
+      "USB-A®",
+      "HDMI 2.1",
+      "DisplayPort™",
+      "RJ-45 (Ethernet)",
+      "Headphone/Microphone combo jack"
+    ],
+    "wireless": {
+      "wifi_6": false,
+      "wifi_6e": true,
+      "wifi_5": false,
+      "bluetooth": true,
+      "bluetooth_version": "5.3"
+    },
+    "operating_system": [
+      "Windows 11 Home",
+      "Windows 11 Home Single Language",
+      "Windows 11 Pro",
+      "Windows 11 Pro Education",
+      "Windows 11 Enterprise",
+      "Windows 10 Pro",
+      "Windows 10 Enterprise",
+      "FreeDOS"
+    ],
+    "security": [
+      "TPM 2.0",
+      "Fingerprint reader/sensor",
+      "IR Camera",
+      "HP Wolf Pro Security Edition"
+    ],
+    "multi_media": {
+      "camera": [
+        "5MP camera with 88° field of view",
+        "720p HD camera with temporal noise reduction",
+        "IR camera"
+      ],
+      "camera_privacy": true,
+      "audio": [
+        "Dual stereo speakers",
+        "Dual array microphone"
+      ]
+    },
+    "monitor": {
+      "max_displays": "Not specified",
+      "supported_resolutions": [],
+      "hdmi_support": "Not specified",
+      "usbc_support": "Not specified",
+      "thunderbolt_support": "Not specified"
+    },
+    "chipset": "Not specified",
+    "colour": [
+      "Pike silver"
+    ],
+    "case_material": "Aluminum",
+    "network": {
+      "ethernet": "Gigabit Ethernet",
+      "wwan": [
+        "Wireless 4G LTE",
+        "CAT16 WWAN",
+        "5G"
+      ],
+      "nfc": false
+    },
+    "warranty": [
+      {
+        "duration": "1 year",
+        "type": "Limited warranty"
+      },
+      {
+        "duration": "3 years",
+        "type": "Limited warranty"
+      },
+      {
+        "duration": "90 days",
+        "type": "Software warranty"
+      }
+    ],
+    "certification": [
+      "CECP",
+      "EPEAT",
+      "SEPA",
+      "ENERGY STAR®",
+      "Taiwan Green Mark",
+      "TCO Certified"
+    ],
+    "input_device": {
+      "keyboard": [
+        "HP Premium Keyboard",
+        "Spill-resistant",
+        "Backlit",
+        "Numeric keypad"
+      ],
+      "touchpad": "Clickpad",
+      "pointing_device": "Not specified"
+    },
+    "power": {
+      "adapter_wattage": [
+        "45W USB Type-C adapter",
+        "65W USB Type-C adapter",
+        "45W EM External AC power adapter",
+        "65W EM External AC power adapter"
+      ],
+      "power_delivery": "USB-C Power Delivery",
+      "rapid_charge": "Not specified"
+    }
+  },
+  {
+    "source_pdf": "c08947328.pdf",
+    "brand": "HP",
+    "model": "ProBook 440 14 inch G11",
+    "processor": [
+      "Intel® Core™ Ultra 5 125H processor",
+      "Intel® Core™ Ultra 5 155H processor",
+      "Intel® Core™ Ultra 7 125H processor",
+      "Intel® Core™ Ultra 7 155H processor"
+    ],
+    "memory": [
+      "48GB DDR5-5600 MT/s"
+    ],
+    "storage": [
+      "Up to 256 GB PCIe® NVMe™ Value SSD",
+      "512 GB up to 1 TB PCIe® Gen4x4 NVMe™ M.2 SSD"
+    ],
+    "display": [
+      {
+        "size": "14 inches (35.6cm)",
+        "resolution": "1920x1200",
+        "brightness": "400 nits",
+        "touch": true,
+        "anti_glare": true,
+        "panel_type": "Not specified",
+        "refresh_rate": "Not specified"
+      }
+    ],
+    "graphics": [
+      "Intel® Graphics (Integrated)",
+      "NVIDIA® GeForce RTX™ 2050 Laptop GPU (4 GB GDDR6 dedicated)"
+    ],
+    "battery": [
+      "HP 3-Cell 56Wh Li-ion polymer"
+    ],
+    "weights": {
+      "variant_1": {
+        "sku_id": "HP440G11-Standard",
+        "top_material": "Not specified",
+        "bottom_material": "Not specified",
+        "weight": "1.39 kg",
+        "weight_lbs": "3.06 lbs"
+      }
+    },
+    "dimensions": "31.86 x 22.44 x 1.70 cm",
+    "ports": [
+      "USB-C®",
+      "USB-A®",
+      "HDMI 2.1",
+      "DisplayPort™",
+      "RJ-45 (Ethernet)",
+      "Stereo headphone/microphone combo jack"
+    ],
+    "wireless": {
+      "wifi_6": false,
+      "wifi_6e": true,
+      "wifi_5": false,
+      "bluetooth": true,
+      "bluetooth_version": "5.3"
+    },
+    "operating_system": [
+      "Windows 11 Home",
+      "Windows 11 Pro",
+      "Windows 11 Pro Education",
+      "Windows 11 Enterprise",
+      "Windows 10 Enterprise",
+      "FreeDOS"
+    ],
+    "security": [
+      "TPM 2.0 Embedded Security Chip",
+      "Fingerprint reader/sensor",
+      "IR camera",
+      "HP Wolf Pro Security Edition"
+    ],
+    "multi_media": {
+      "camera": [
+        "FHD camera",
+        "5MP IR camera"
+      ],
+      "camera_privacy": true,
+      "audio": [
+        "Audio by Poly",
+        "Dual stereo speakers with discrete amplifiers",
+        "Dual array microphones"
+      ]
+    },
+    "monitor": {
+      "max_displays": "Not specified",
+      "supported_resolutions": [],
+      "hdmi_support": "Not specified",
+      "usbc_support": "Not specified",
+      "thunderbolt_support": "Not specified"
+    },
+    "chipset": "Not specified",
+    "colour": [
+      "Pike silver"
+    ],
+    "case_material": "Aluminum",
+    "network": {
+      "ethernet": "RJ-45 Gigabit Ethernet",
+      "wwan": [
+        "Wireless 4G LTE",
+        "CAT16 WWAN",
+        "Mobile broadband",
+        "5G"
+      ],
+      "nfc": false
+    },
+    "warranty": [
+      {
+        "duration": "1 year",
+        "type": "Limited warranty"
+      },
+      {
+        "duration": "90 days",
+        "type": "Software limited warranty"
+      }
+    ],
+    "certification": [
+      "EPEAT",
+      "TCO Certified",
+      "GS Marks",
+      "WW RoHS",
+      "CE",
+      "ENERGY STAR®",
+      "Taiwan BSMI/NCC",
+      "Korea KCC/KC/KES",
+      "Saudi Arabian Compliance",
+      "EAEU Compliance",
+      "Ukraine NSoC/TEC",
+      "China CCC/SRRC"
+    ],
+    "input_device": {
+      "keyboard": [
+        "Spill-resistant",
+        "Optional backlit",
+        "DuraKeys"
+      ],
+      "touchpad": "Microsoft Precision Touchpad with multi-touch gesture support",
+      "pointing_device": "Clickpad"
+    },
+    "power": {
+      "adapter_wattage": [
+        "45W USB Type-C® adapter",
+        "65W USB Type-C® adapter",
+        "65W USB Type-C® Halogen-free adapter",
+        "100W USB Type-C® slim adapter"
+      ],
+      "power_delivery": "USB-C Power Delivery",
+      "rapid_charge": "Not specified"
+    }
+  },
+  {
+    "source_pdf": "ThinkPad_E14_Gen_5_AMD_Spec.pdf",
+    "brand": "Lenovo",
+    "model": "ThinkPad E14 Gen 5 (AMD)",
+    "processor": [
+      "AMD Ryzen™ 3 7330U (6 Cores / 16 Threads)",
+      "AMD Ryzen™ 5 5625U (6 Cores / 12 Threads)",
+      "AMD Ryzen™ 5 7430U (6 Cores / 12 Threads)",
+      "AMD Ryzen™ 5 7530U (4 Cores / 8 Threads)",
+      "AMD Ryzen™ 7 7730U (6 Cores / 12 Threads)"
+    ],
+    "memory": [
+      "8GB DDR4-3200",
+      "16GB DDR4-3200",
+      "Up to 40GB (8GB soldered + 32GB SO-DIMM) DDR4-3200"
+    ],
+    "storage": [
+      "128GB M.2 2242 SSD, PCIe® NVMe® 3.0",
+      "256GB M.2 2242 SSD, PCIe® NVMe® 4.0",
+      "512GB M.2 2242 SSD, PCIe® NVMe® 4.0",
+      "1TB M.2 2280 SSD, PCIe® NVMe® 4.0"
+    ],
+    "display": [
+      {
+        "size": "14 inches",
+        "resolution": "1920x1200",
+        "brightness": "300 nits",
+        "touch": false,
+        "anti_glare": true,
+        "panel_type": "IPS",
+        "refresh_rate": "60 Hz"
+      },
+      {
+        "size": "14 inches",
+        "resolution": "1920x1200",
+        "brightness": "300 nits",
+        "touch": true,
+        "anti_glare": true,
+        "panel_type": "IPS",
+        "refresh_rate": "60 Hz"
+      },
+      {
+        "size": "14 inches",
+        "resolution": "2200x1440",
+        "brightness": "300 nits",
+        "touch": false,
+        "anti_glare": true,
+        "panel_type": "IPS",
+        "refresh_rate": "60 Hz"
+      }
+    ],
+    "graphics": [
+      "AMD Radeon™ Graphics (Integrated, Shared Memory, DirectX® 12)"
+    ],
+    "battery": [
+      "47Wh Rechargeable Li-ion Battery",
+      "57Wh Rechargeable Li-ion Battery"
+    ],
+    "weights": {
+      "variant_1": {
+        "sku_id": "E14G5AMD-AL-PCABS",
+        "top_material": "Aluminium",
+        "bottom_material": "PC-ABS",
+        "weight": "1.41 kg",
+        "weight_lbs": "3.11 lbs"
+      },
+      "variant_2": {
+        "sku_id": "E14G5AMD-AL-AL",
+        "top_material": "Aluminium",
+        "bottom_material": "Aluminium",
+        "weight": "1.43 kg",
+        "weight_lbs": "3.15 lbs"
+      }
+    },
+    "dimensions": "313 x 219.3 x 17.99 mm",
+    "ports": [
+      "USB-C® 3.2 Gen 2 (data transfer, Power Delivery 3.0, DisplayPort™ 1.4)",
+      "USB-C® 3.2 Gen 1 (data transfer, Power Delivery 3.0, DisplayPort™ 1.4)",
+      "USB 3.1 Gen 1",
+      "HDMI® 1.4b",
+      "RJ-45 (Ethernet)",
+      "Headphone/Microphone combo jack (3.5mm)"
+    ],
+    "wireless": {
+      "wifi_6": true,
+      "wifi_6e": true,
+      "wifi_5": false,
+      "bluetooth": true,
+      "bluetooth_version": "5.1 (Bluetooth® 5.3 hardware ready)"
+    },
+    "operating_system": [
+      "Windows® 11 Pro",
+      "Windows® 11 Home",
+      "Windows® 11 Home Single Language",
+      "Windows® 11 DG Windows® 10 Pro 64",
+      "No preload operating system"
+    ],
+    "security": [
+      "TPM 2.0",
+      "Kensington® Nano Security Slot™ (2.5 x 6 mm)",
+      "Fingerprint reader (touch style, integrated in power button)",
+      "Camera privacy shutter",
+      "IR camera for facial recognition",
+      "NVMe® password",
+      "Power-on password",
+      "Self-healing BIOS"
+    ],
+    "multi_media": {
+      "camera": [
+        "HD 720p with privacy shutter, fixed focus",
+        "FHD 1080p + IR hybrid with privacy shutter, fixed focus"
+      ],
+      "camera_privacy": true,
+      "audio": [
+        "High Definition (HD) Audio Chip, Synaptic® CX11880 codec",
+        "Stereo speakers, 2W x2, Dolby Atmos®",
+        "Dual-microphone array, Dolby Voice®"
+      ]
+    },
+    "monitor": {
+      "max_displays": "4",
+      "supported_resolutions": [
+        "4096x2160",
+        "5120x2160"
+      ],
+      "hdmi_support": "4096x2160@30Hz",
+      "usbc_support": "5120x2160@60Hz",
+      "thunderbolt_support": "Not supported"
+    },
+    "chipset": "AMD SoC (System on Chip) platform",
+    "colour": [
+      "Arctic grey",
+      "Graphite black"
+    ],
+    "case_material": "Aluminium top, PC-ABS/Aluminium bottom (variant dependent)",
+    "network": {
+      "ethernet": "Gigabit Ethernet, Realtek® RTL8111H-CG, 1x RJ-45, supports Wake-on-LAN",
+      "wwan": [],
+      "nfc": false
+    },
+    "warranty": [
+      {
+        "duration": "1 year",
+        "type": "Mail-in service"
+      },
+      {
+        "duration": "1 year",
+        "type": "Courier or carry-in service"
+      },
+      {
+        "duration": "1 year (2-year system board service - Korea only)",
+        "type": "Courier or carry-in service"
+      },
+      {
+        "duration": "1 year",
+        "type": "Limited onsite service"
+      }
+    ],
+    "certification": [
+      "RoHS compliant",
+      "TCO Certified 9.0",
+      "ENERGY STAR® 8.0",
+      "EPEAT™ Gold Registered",
+      "ErP Lot 6/26",
+      "MIL-STD-810H military test passed",
+      "Eyesafe® Certified 2.0",
+      "TÜV Rheinland® Low Blue Light"
+    ],
+    "input_device": {
+      "keyboard": [
+        "6-row",
+        "Spill-resistant",
+        "Multimedia Fn keys with Unified Communications controls"
+      ],
+      "touchpad": "Multi-touch 3-button Trackpad",
+      "pointing_device": "TrackPoint"
+    },
+    "power": {
+      "adapter_wattage": [
+        "65W USB-C® (2-pin) AC adapter, supports PD 3.0, 100-240V, 50-60Hz",
+        "65W USB-C® (3-pin) AC adapter, supports PD 3.0, 100-240V, 50-60Hz"
+      ],
+      "power_delivery": "Power Delivery 3.0",
+      "rapid_charge": "Supported"
+    }
+  },
+  {
+    "source_pdf": "ThinkPad_E14_Gen_5_Intel_Spec.pdf",
+    "brand": "Lenovo",
+    "model": "ThinkPad E14 Gen 5 (Intel)",
+    "processor": [
+      "Intel® Core™ i3-1315U (6 Cores / 8 Threads)",
+      "Intel® Core™ i5-1335U (10 Cores / 12 Threads)",
+      "Intel® Core™ i5-1340P (12 Cores / 16 Threads)",
+      "Intel® Core™ i5-1345U (10 Cores / 12 Threads)",
+      "Intel® Core™ i5-13420H (8 Cores / 12 Threads)",
+      "Intel® Core™ i5-13500H (12 Cores / 16 Threads)",
+      "Intel® Core™ i7-1355U (10 Cores / 12 Threads)",
+      "Intel® Core™ i7-1360P (12 Cores / 16 Threads)",
+      "Intel® Core™ i7-1365U (10 Cores / 12 Threads)",
+      "Intel® Core™ i7-13700H (14 Cores / 20 Threads)"
+    ],
+    "memory": [
+      "Up to 40GB (8GB soldered + 32GB SO-DIMM) DDR4-3200",
+      "Up to 48GB (16GB soldered + 32GB SO-DIMM) DDR4-3200"
+    ],
+    "storage": [
+      "Up to 1TB M.2 2242 SSD PCIe® 3.0",
+      "Up to 1TB M.2 2242 SSD PCIe® 4.0"
+    ],
+    "display": [
+      {
+        "size": "14 inches",
+        "resolution": "1920x1200",
+        "brightness": "300 nits",
+        "touch": false,
+        "anti_glare": true,
+        "panel_type": "IPS",
+        "refresh_rate": "60 Hz"
+      },
+      {
+        "size": "14 inches",
+        "resolution": "1920x1200",
+        "brightness": "300 nits",
+        "touch": true,
+        "anti_glare": true,
+        "panel_type": "IPS",
+        "refresh_rate": "60 Hz"
+      },
+      {
+        "size": "14 inches",
+        "resolution": "2200x1440",
+        "brightness": "300 nits",
+        "touch": false,
+        "anti_glare": true,
+        "panel_type": "IPS",
+        "refresh_rate": "60 Hz"
+      }
+    ],
+    "graphics": [
+      "Intel® UHD Graphics (Integrated)",
+      "Intel® Iris® Xe Graphics (Integrated)",
+      "NVIDIA® GeForce MX550 (2GB GDDR6 Discrete, DirectX® 12)"
+    ],
+    "battery": [
+      "47Wh Rechargeable Li-ion Battery, supports Rapid Charge",
+      "57Wh Rechargeable Li-ion Battery, supports Rapid Charge"
+    ],
+    "weights": {
+      "variant_1": {
+        "sku_id": "E14G5Intel-AL-PCABS",
+        "top_material": "Aluminium",
+        "bottom_material": "PC-ABS",
+        "weight": "1.41 kg",
+        "weight_lbs": "3.11 lbs"
+      },
+      "variant_2": {
+        "sku_id": "E14G5Intel-AL-AL",
+        "top_material": "Aluminium",
+        "bottom_material": "Aluminium",
+        "weight": "1.43 kg",
+        "weight_lbs": "3.15 lbs"
+      }
+    },
+    "dimensions": "313 x 219.3 x 17.99 mm",
+    "ports": [
+      "USB 2.0",
+      "USB 3.2 Gen 1",
+      "USB-C® 3.2 Gen 2 (data transfer, Power Delivery 3.0, DisplayPort™ 1.4)",
+      "Thunderbolt™ 4 / USB4® 40Gbps (data transfer, Power Delivery 3.0, DisplayPort™ 1.4)",
+      "HDMI® 2.1, up to 4K/60Hz",
+      "RJ-45 (Ethernet)",
+      "Headphone/Microphone combo jack (3.5mm)"
+    ],
+    "wireless": {
+      "wifi_6": true,
+      "wifi_6e": true,
+      "wifi_5": false,
+      "bluetooth": true,
+      "bluetooth_version": "5.1 (Bluetooth® 5.3 hardware ready)"
+    },
+    "operating_system": [
+      "Windows® 11 Pro",
+      "Windows® 11 Home",
+      "Windows® 11 Home Single Language",
+      "Windows® 11 DG Windows® 10 Pro 64",
+      "Ubuntu Linux",
+      "No preload operating system"
+    ],
+    "security": [
+      "TPM 2.0",
+      "Smart Card Reader",
+      "Fingerprint reader (touch style, integrated in power button)",
+      "Camera privacy shutter",
+      "IR camera for facial recognition",
+      "NVMe® password",
+      "Power-on password",
+      "Self-healing BIOS"
+    ],
+    "multi_media": {
+      "camera": [
+        "HD 720p with privacy shutter, fixed focus",
+        "FHD 1080p + IR hybrid with privacy shutter, fixed focus"
+      ],
+      "camera_privacy": true,
+      "audio": [
+        "High Definition (HD) Audio Chip, Synaptic® CX11880 codec",
+        "Stereo speakers, 2W x2, Dolby Atmos®",
+        "Dual-microphone array, Dolby Voice®"
+      ]
+    },
+    "monitor": {
+      "max_displays": "4",
+      "supported_resolutions": [
+        "4096x2160",
+        "5120x2880"
+      ],
+      "hdmi_support": "4096x2160@60Hz",
+      "usbc_support": "4096x2160@60Hz",
+      "thunderbolt_support": "5120x2880@60Hz"
+    },
+    "chipset": "Intel® SoC (System on Chip)",
+    "colour": [
+      "Graphite black",
+      "Arctic grey"
+    ],
+    "case_material": "Aluminium top, PC-ABS/Aluminium bottom (variant dependent)",
+    "network": {
+      "ethernet": "Gigabit Ethernet, Intel® Ethernet Connection I219-V, 1x RJ-45, supports Wake-on-LAN",
+      "wwan": [],
+      "nfc": false
+    },
+    "warranty": [
+      {
+        "duration": "1 year",
+        "type": "Mail-in service"
+      },
+      {
+        "duration": "1 year",
+        "type": "Courier or carry-in service"
+      },
+      {
+        "duration": "1 year (2-year system board service - Korea only)",
+        "type": "Courier or carry-in service"
+      },
+      {
+        "duration": "1 year",
+        "type": "Limited onsite service"
+      }
+    ],
+    "certification": [
+      "ENERGY STAR® 8.0",
+      "EPEAT™ Gold Registered",
+      "ErP Lot 6/26",
+      "FSC certified package",
+      "RoHS compliant",
+      "TCO Certified 9.0",
+      "MIL-STD-810H military test passed",
+      "Eyesafe® Certified 2.0",
+      "TÜV Rheinland® Low Blue Light"
+    ],
+    "input_device": {
+      "keyboard": [
+        "6-row",
+        "Spill-resistant",
+        "Multimedia Fn keys with Unified Communications controls"
+      ],
+      "touchpad": "Multi-touch 3-button Trackpad",
+      "pointing_device": "TrackPoint"
+    },
+    "power": {
+      "adapter_wattage": [
+        "65W USB-C® (2-pin) AC adapter, supports PD 3.0, 100-240V, 50-60Hz",
+        "65W USB-C® (3-pin) AC adapter, supports PD 3.0, 100-240V, 50-60Hz"
+      ],
+      "power_delivery": "Power Delivery 3.0",
+      "rapid_charge": "Supported"
+    }
+  }
+]

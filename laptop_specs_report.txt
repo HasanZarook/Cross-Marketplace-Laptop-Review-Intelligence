@@ -1,0 +1,62 @@
+================================================================================
+LAPTOP SPECIFICATIONS SUMMARY REPORT
+================================================================================
+
+Total Laptops: 4
+
+
+1. HP - ProBook 450 15.6 inch G10
+   Source: c08504822.pdf
+   Processors: 7 options
+   Memory: 32GB DDR4-3200 MHz RAM
+   Storage: 2 options
+   Display Variants: 1
+   Graphics: Intel® UHD Graphics (Integrated), NVIDIA® GeForce RTX™ 2050 Laptop GPU (4 GB GDDR6 dedicated)
+   Weight: 1.79 kg
+   OS Options: 8
+   Certifications: 6
+
+2. HP - ProBook 440 14 inch G11
+   Source: c08947328.pdf
+   Processors: 4 options
+   Memory: 48GB DDR5-5600 MT/s
+   Storage: 2 options
+   Display Variants: 1
+   Graphics: Intel® Graphics (Integrated), NVIDIA® GeForce RTX™ 2050 Laptop GPU (4 GB GDDR6 dedicated)
+   Weight: 1.39 kg
+   OS Options: 6
+   Certifications: 12
+
+3. Lenovo - ThinkPad E14 Gen 5 (AMD)
+   Source: ThinkPad_E14_Gen_5_AMD_Spec.pdf
+   Processors: 5 options
+   Memory: 8GB DDR4-3200, 16GB DDR4-3200, Up to 40GB (8GB soldered + 32GB SO-DIMM) DDR4-3200
+   Storage: 4 options
+   Display Variants: 3
+   Graphics: AMD Radeon™ Graphics (Integrated, Shared Memory, DirectX® 12)
+   Weight: 1.41 kg
+   OS Options: 5
+   Certifications: 8
+
+4. Lenovo - ThinkPad E14 Gen 5 (Intel)
+   Source: ThinkPad_E14_Gen_5_Intel_Spec.pdf
+   Processors: 10 options
+   Memory: Up to 40GB (8GB soldered + 32GB SO-DIMM) DDR4-3200, Up to 48GB (16GB soldered + 32GB SO-DIMM) DDR4-3200
+   Storage: 2 options
+   Display Variants: 3
+   Graphics: Intel® UHD Graphics (Integrated), Intel® Iris® Xe Graphics (Integrated)
+   Weight: 1.41 kg
+   OS Options: 6
+   Certifications: 9
+
+================================================================================
+FIELD COMPLETENESS ANALYSIS
+================================================================================
+
+Chipset: 2/4 laptops
+Case Material: 4/4 laptops
+Warranty: 4/4 laptops
+Certification: 4/4 laptops
+Power: 4/4 laptops
+Network: 4/4 laptops
+Security: 4/4 laptops

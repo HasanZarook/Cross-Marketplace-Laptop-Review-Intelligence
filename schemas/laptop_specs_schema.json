@@ -1,0 +1,314 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Laptop Specifications",
+  "description": "Schema for laptop technical specifications extracted from PDFs",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "source_pdf",
+      "brand",
+      "model",
+      "processor",
+      "memory",
+      "storage",
+      "display"
+    ],
+    "properties": {
+      "source_pdf": {
+        "type": "string",
+        "description": "Source PDF filename"
+      },
+      "brand": {
+        "type": "string",
+        "enum": [
+          "HP",
+          "Lenovo",
+          "Dell",
+          "Asus",
+          "Acer",
+          "Unknown"
+        ],
+        "description": "Laptop manufacturer brand"
+      },
+      "model": {
+        "type": "string",
+        "description": "Laptop model name and series"
+      },
+      "processor": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1,
+        "description": "Available processor options"
+      },
+      "memory": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1,
+        "description": "RAM configurations available"
+      },
+      "storage": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1,
+        "description": "Storage options (SSD/HDD)"
+      },
+      "display": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "size",
+            "resolution"
+          ],
+          "properties": {
+            "size": {
+              "type": "string"
+            },
+            "resolution": {
+              "type": "string"
+            },
+            "brightness": {
+              "type": "string"
+            },
+            "touch": {
+              "type": "boolean"
+            },
+            "anti_glare": {
+              "type": "boolean"
+            },
+            "panel_type": {
+              "type": "string"
+            },
+            "refresh_rate": {
+              "type": "string"
+            }
+          }
+        },
+        "minItems": 1,
+        "description": "Display configurations"
+      },
+      "graphics": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Graphics card options"
+      },
+      "battery": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Battery specifications"
+      },
+      "weights": {
+        "type": "object",
+        "description": "Weight variants based on configuration",
+        "patternProperties": {
+          "^variant_\\d+$": {
+            "type": "object",
+            "properties": {
+              "sku_id": {
+                "type": "string"
+              },
+              "top_material": {
+                "type": "string"
+              },
+              "bottom_material": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "string"
+              },
+              "weight_lbs": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "dimensions": {
+        "type": "string",
+        "description": "Physical dimensions (L x W x H)"
+      },
+      "ports": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Available ports and connectors"
+      },
+      "wireless": {
+        "type": "object",
+        "properties": {
+          "wifi_6": {
+            "type": "boolean"
+          },
+          "wifi_6e": {
+            "type": "boolean"
+          },
+          "wifi_5": {
+            "type": "boolean"
+          },
+          "bluetooth": {
+            "type": "boolean"
+          },
+          "bluetooth_version": {
+            "type": "string"
+          }
+        }
+      },
+      "operating_system": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Available OS options"
+      },
+      "security": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Security features"
+      },
+      "multi_media": {
+        "type": "object",
+        "properties": {
+          "camera": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "camera_privacy": {
+            "type": "boolean"
+          },
+          "audio": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "monitor": {
+        "type": "object",
+        "properties": {
+          "max_displays": {
+            "type": "string"
+          },
+          "supported_resolutions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "hdmi_support": {
+            "type": "string"
+          },
+          "usbc_support": {
+            "type": "string"
+          },
+          "thunderbolt_support": {
+            "type": "string"
+          }
+        }
+      },
+      "chipset": {
+        "type": "string",
+        "description": "Chipset information"
+      },
+      "colour": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Available color options"
+      },
+      "case_material": {
+        "type": "string",
+        "description": "Chassis material"
+      },
+      "network": {
+        "type": "object",
+        "properties": {
+          "ethernet": {
+            "type": "string"
+          },
+          "wwan": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "nfc": {
+            "type": "boolean"
+          }
+        }
+      },
+      "warranty": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "duration": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "certification": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Environmental and compliance certifications"
+      },
+      "input_device": {
+        "type": "object",
+        "properties": {
+          "keyboard": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "touchpad": {
+            "type": "string"
+          },
+          "pointing_device": {
+            "type": "string"
+          }
+        }
+      },
+      "power": {
+        "type": "object",
+        "properties": {
+          "adapter_wattage": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "power_delivery": {
+            "type": "string"
+          },
+          "rapid_charge": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
