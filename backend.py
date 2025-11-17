@@ -1,4 +1,3 @@
-
 import os
 import json
 from fastapi import FastAPI
@@ -6,9 +5,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from groq import Groq  # Groq SDK
 from dotenv import load_dotenv
-from src.tools.webpage_scraper2 import get_final_output  # Your previously scraped HTML
-# from src.tools.webpage_scraper import run_all  # Import the scraper function
-
+from src.tools.webpage_scraper2 import output  # Your previously scraped HTML
+from src.tools.webpage_scraper import run_all
+import asyncio
 # Load environment variables
 load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
@@ -34,16 +33,9 @@ chat_history: list[dict] = []
 class ChatRequest(BaseModel):
     question: str
 
-def load_pdf_specs() -> str:
+def load_pdf_specs(json_file) -> str:
     """Load PDF specs JSON and convert to string for LLM prompt."""
-    json_path = os.path.join(os.path.dirname(__file__), "laptop_specs_normalized.json")
-    with open(json_path, "r", encoding="utf-8") as file:
-        pdf_specs_data = json.load(file)
-    return json.dumps(pdf_specs_data, indent=2)
-
-def load_web_scrap() -> str:
-    """Load PDF specs JSON and convert to string for LLM prompt."""
-    json_path = os.path.join(os.path.dirname(__file__), "laptops_output.json")
+    json_path = os.path.join(os.path.dirname(__file__), json_file)
     with open(json_path, "r", encoding="utf-8") as file:
         pdf_specs_data = json.load(file)
     return json.dumps(pdf_specs_data, indent=2)
@@ -60,11 +52,9 @@ async def chat(request: ChatRequest):
     if not question:
         return {"answer": "Hello! How can I help you with the 4 laptops?"}
 
-    pdf_specs_string = load_pdf_specs()
-    
-    # webfinal_output = await run_all()
-    webfinal_output_2 = get_final_output()
-    webfinal_output = load_web_scrap()
+    pdf_specs_string = load_pdf_specs("laptop_specs_normalized.json")
+
+    web_data = load_pdf_specs("laptops_output.json")
     # System prompt with instructions
     system_prompt = f"""
 You are an expert Business Laptop Assistant.
@@ -77,18 +67,17 @@ Laptop Options (ONLY these 4):
 
 Data Sources:
 1. PDF Specs: {pdf_specs_string}
-2. Website Scrap Data: {webfinal_output_2} {webfinal_output}
-
+2. Website scrapped data: {output} {web_data}
 
 Instructions:
 1. ONLY answer questions about the 4 laptops above.
-2. ALWAYS check both PDF Specs and Website scrapdata to find information.
-3. If a laptop is missing from the website scrapdata but present in PDF, use the PDF data.
+2. ALWAYS check both PDF Specs and Website scrapped data to find information.
+3. If a laptop is missing from the website scrapped data but present in PDF, use the PDF data.
 4. NEVER invent or assume any specs.
 5. Provide structured answers in the following format:
    - **Laptop Name:**
    - **Key Specifications:** (CPU, RAM, Storage, Display, GPU, Battery, etc.)
-   - **Current Price:** (extract from website scrapdata)
+   - **Current Price:** (extract from website scrapped data)
    - **Pros:** 
    - **Cons:** 
    - **Recommendation:** 

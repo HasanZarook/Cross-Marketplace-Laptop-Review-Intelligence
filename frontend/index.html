@@ -209,9 +209,9 @@ document.getElementById("resetFilters").onclick = () => {
   results.innerHTML = "";
 };
 
-
+// ============================================
 // CHAT FUNCTIONALITY - REAL API INTEGRATION
-
+// ============================================
 
 async function checkAPIStatus() {
   try {
@@ -304,7 +304,7 @@ async function sendMessage() {
   } catch (error) {
     console.error("Chat error:", error);
     hideLoading();
-    appendMessage(`❌ Error: ${error.message}\n\nPlease make sure:\n1. Backend is running on ${API_BASE_URL}\n2. CORS is enabled\n3. Groq,Llama has been called and running`, "error");
+    appendMessage(`❌ Error: ${error.message}\n\nPlease make sure:\n1. Backend is running on ${API_BASE_URL}\n2. CORS is enabled\n3. Ollama is installed and running`, "error");
   } finally {
     // Re-enable send button
     sendBtn.disabled = false;

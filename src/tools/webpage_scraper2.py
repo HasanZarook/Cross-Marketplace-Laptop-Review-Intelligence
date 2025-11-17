@@ -33,6 +33,107 @@ def extract_visible_text(html):
     return "\n".join(t.strip() for t in visible if t.strip())
 
 
+# -----------------------------
+# Fetch main page
+# -----------------------------
+response = session.get(PRODUCT_URL, timeout=20)
+html = response.text
+soup = BeautifulSoup(html, "html.parser")
+
+# Save raw HTML
+with open(HTML_SAVE_FILE, "w", encoding="utf-8") as f:
+    f.write(html)
+
+print("Saved:", HTML_SAVE_FILE)
+
+
+# -----------------------------
+# Extract Product JSON-LD
+# -----------------------------
+product_json = None
+json_ld_tag = soup.find("script", type="application/ld+json")
+
+if json_ld_tag:
+    try:
+        parsed = json.loads(json_ld_tag.string)
+
+        if isinstance(parsed, list):
+            for item in parsed:
+                if item.get("@type") == "Product":
+                    product_json = item
+                    break
+        elif parsed.get("@type") == "Product":
+            product_json = parsed
+    except:
+        pass
+
+
+# -----------------------------
+# Find Review + Q&A endpoints
+# -----------------------------
+review_endpoint = None
+qa_endpoint = None
+
+for script in soup.find_all("script"):
+    if not script.string:
+        continue
+
+    text = script.string
+
+    if "review" in text.lower() and "api" in text.lower():
+        for piece in text.split('"'):
+            if "review" in piece and "api" in piece:
+                review_endpoint = piece
+
+    if "question" in text.lower() and "api" in text.lower():
+        for piece in text.split('"'):
+            if "question" in piece and "api" in piece:
+                qa_endpoint = piece
+
+
+# -----------------------------
+# API Review Fetch
+# -----------------------------
+reviews_api = []
+if review_endpoint:
+    try:
+        r = session.get(review_endpoint, timeout=20)
+        js = r.json()
+
+        for item in js.get("results", []):
+            reviews_api.append({
+                "rating": item.get("rating"),
+                "title": item.get("title"),
+                "review": item.get("reviewText"),
+                "author": item.get("userNickname"),
+                "date": item.get("submissionTime"),
+            })
+    except Exception as e:
+        print("Review API failed:", e)
+
+
+# -----------------------------
+# API Q&A Fetch
+# -----------------------------
+qa_api = []
+if qa_endpoint:
+    try:
+        r = session.get(qa_endpoint, timeout=20)
+        js = r.json()
+
+        for item in js.get("results", []):
+            answers = [{
+                "answer": a.get("answerText"),
+                "author": a.get("userNickname"),
+                "date": a.get("submissionTime"),
+            } for a in item.get("answers", [])]
+
+            qa_api.append({
+                "question": item.get("questionText"),
+                "answers": answers
+            })
+    except Exception as e:
+        print("Q&A API failed:", e)
 
 
 # ----------------------------------------------------
@@ -110,135 +211,32 @@ def extract_qna_html(soup):
 
     return qna
 
-def get_final_output():
-    # -----------------------------
-    # Fetch main page
-    # -----------------------------
-    response = session.get(PRODUCT_URL, timeout=20)
-    html = response.text
-    soup = BeautifulSoup(html, "html.parser")
 
-    # Save raw HTML
-    with open(HTML_SAVE_FILE, "w", encoding="utf-8") as f:
-        f.write(html)
+# Run HTML parsers
+reviews_html = extract_reviews_html(soup)
+qa_html = extract_qna_html(soup)
 
-    print("Saved:", HTML_SAVE_FILE)
-
-
-    # -----------------------------
-    # Extract Product JSON-LD
-    # -----------------------------
-    product_json = None
-    json_ld_tag = soup.find("script", type="application/ld+json")
-
-    if json_ld_tag:
-        try:
-            parsed = json.loads(json_ld_tag.string)
-
-            if isinstance(parsed, list):
-                for item in parsed:
-                    if item.get("@type") == "Product":
-                        product_json = item
-                        break
-            elif parsed.get("@type") == "Product":
-                product_json = parsed
-        except:
-            pass
-
-
-    # -----------------------------
-    # Find Review + Q&A endpoints
-    # -----------------------------
-    review_endpoint = None
-    qa_endpoint = None
-
-    for script in soup.find_all("script"):
-        if not script.string:
-            continue
-
-        text = script.string
-
-        if "review" in text.lower() and "api" in text.lower():
-            for piece in text.split('"'):
-                if "review" in piece and "api" in piece:
-                    review_endpoint = piece
-
-        if "question" in text.lower() and "api" in text.lower():
-            for piece in text.split('"'):
-                if "question" in piece and "api" in piece:
-                    qa_endpoint = piece
-
-
-    # -----------------------------
-    # API Review Fetch
-    # -----------------------------
-    reviews_api = []
-    if review_endpoint:
-        try:
-            r = session.get(review_endpoint, timeout=20)
-            js = r.json()
-
-            for item in js.get("results", []):
-                reviews_api.append({
-                    "rating": item.get("rating"),
-                    "title": item.get("title"),
-                    "review": item.get("reviewText"),
-                    "author": item.get("userNickname"),
-                    "date": item.get("submissionTime"),
-                })
-        except Exception as e:
-            print("Review API failed:", e)
-
-
-    # -----------------------------
-    # API Q&A Fetch
-    # -----------------------------
-    qa_api = []
-    if qa_endpoint:
-        try:
-            r = session.get(qa_endpoint, timeout=20)
-            js = r.json()
-
-            for item in js.get("results", []):
-                answers = [{
-                    "answer": a.get("answerText"),
-                    "author": a.get("userNickname"),
-                    "date": a.get("submissionTime"),
-                } for a in item.get("answers", [])]
-
-                qa_api.append({
-                    "question": item.get("questionText"),
-                    "answers": answers
-                })
-        except Exception as e:
-            print("Q&A API failed:", e)
-
-    # Run HTML parsers
-    reviews_html = extract_reviews_html(soup)
-    qa_html = extract_qna_html(soup)
-
-    # -----------------------------
-    # Build final JSON
-    # -----------------------------
-    output = {
-        "url": PRODUCT_URL,
-        "product": product_json or {},
-        "visible_text": extract_visible_text(html),
-        "reviews": {
-            "api": reviews_api,
-            "html": reviews_html,
-        },
-        "qa": {
-            "api": qa_api,
-            "html": qa_html,
-        }
+# -----------------------------
+# Build final JSON
+# -----------------------------
+output = {
+    "url": PRODUCT_URL,
+    "product": product_json or {},
+    "visible_text": extract_visible_text(html),
+    "reviews": {
+        "api": reviews_api,
+        "html": reviews_html,
+    },
+    "qa": {
+        "api": qa_api,
+        "html": qa_html,
     }
+}
 
-    # -----------------------------
-    # Save JSON
-    # -----------------------------
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=4, ensure_ascii=False)
+# -----------------------------
+# Save JSON
+# -----------------------------
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    json.dump(output, f, indent=4, ensure_ascii=False)
 
-    print("Saved:", OUTPUT_FILE)
-    return output
+print("Saved:", OUTPUT_FILE)
