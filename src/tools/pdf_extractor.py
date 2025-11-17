@@ -54,7 +54,7 @@ class LaptopSpecExtractor:
                 'certification': self._extract_certification(text),
                 'input_device': self._extract_inputdevice(text),
                 'power': self._extract_power(text),
-                'raw_text': text[:500]  # First 500 chars for debugging
+                'raw_text': text[:500]  
             }
             
         return specs
